@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <title>ШИФР ПЛЕЙФЕРА</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="main-text">
+                <h1>ШИФР ПЛЕЙФЕРА</h1>
+                <h1>НА РУССКОМ</h1>
+            </div>
+        </div>
+        <div class="line"></div>
+
+        <div class="osnov">
+            <div class="key-and-primer">
+                <div class="key-and-pole">
+                    <div class="key-text">
+                        <h2>К</h2>
+                        <h2>Л</h2>
+                        <h2>Ю</h2>
+                        <h2>Ч</h2>
+                    </div>
+                    <form action="" class="key-pole-form" method="POST">
+                        <div class="key-pole">
+                            <input type="text" class="input-key" placeholder="ВВЕДИТЕ КЛЮЧ:" name="key_first">
+                        </div>   
+                    
+                </div>
+                <div class="key-primer">
+                    <div class="primer-pole">
+                        <p class="primer-pole-text">КЛЮЧ: РЕВОЛЮЦИЯ<br>
+                        ТЕКСТ ДЛЯ ШИФРА: БАМБУК
+                        ВЫВОД: БАЙДТЛ</p>
+                    </div>
+                    <div class="primer-text">
+                        <h3>П</h3>
+                        <h3>Р</h3>
+                        <h3>И</h3>
+                        <h3>М</h3>
+                        <h3>Е</h3>
+                        <h3>Р</h3>
+                    </div>    
+                </div>
+            </div>
+            <div class="text-shifr">
+                <div class="text">
+                    <h2>ТЕКСТ ДЛЯ ШИФРА</h2>
+                </div>
+                
+                    <div class="pole-shifr">
+                        <input type="text" class="input-shifr" placeholder="ВВЕДИТЕ ТЕКСТ:" name="sent">
+                    </div>
+                
+            </div>
+            <!--Кнопка-->
+            
+                <div class="button">
+                    <button type="submit" name="button" onclick="playfer(key_first, sent)">ЗАШИФРОВАТЬ</button>
+                </div>
+            </form>
+        </div>
+        <div class="line" id="second-line"></div>
+
+        <div class="rashifr">
+            <div class="text-rashifr">
+                <h2 id="text-rashifr">ЗАШИФРОВАННОЕ СООБЩЕНИЕ</h2>
+            </div>
+            <div class="pole-rashifr">
+                <p id="zashifr">{{ answer }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
